@@ -9,7 +9,10 @@ $text = $jsonObj->{"result"}[0]->{"content"}->{"text"};
 
 $text_ex = explode(':', $text);
 
-$response_format_text = ['contentType'=>1,"toType"=>1,"text"=>$result_text];
+if($text == 'ก้อง'){
+	$response_format_text = ['contentType'=>1,"toType"=>1,"text"=>"ความลับนะ"];
+}
+
 
 
 echo "OK";
