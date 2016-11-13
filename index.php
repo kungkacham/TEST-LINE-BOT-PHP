@@ -18,9 +18,11 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			$messages = [
+				if($text == 'ก้อง')
 				'type' => 'text',
-				if($text == 'ก้อง') 'text' => กาก;
-				else $text;
+				'text' => กาก;
+				else 'type' => 'text',
+				'text' => $text;
 			//	'text' => $text
 			];
 					
