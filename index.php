@@ -56,13 +56,8 @@ if (!is_null($events['events'])) {
 			if($text == 'บอย'){
 				$messages = [
 				'type' => 'text',
-				'text' => แฟนก้อง
-			];}
-			
-			if($text == 'บอย'){
-				$messages = [
-				'type' => 'text',
-				'text' => อุ้ย ไม่ใช่แฟนก้อง แต่อัพเกรดเป็น ผัว แล้ว
+				'text' => แฟนก้อง 
+				อุ้ย ลืมไป ไม่ใช่แฟน แต่อัพเกรดเป็น ผัว แล้ว
 			];}
 			
 			//else{$messages = [
