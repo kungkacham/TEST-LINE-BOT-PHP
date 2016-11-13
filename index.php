@@ -44,7 +44,19 @@ if (!is_null($events['events'])) {
 			if($text == 'ก่ายก้อง'){
 				$messages = [
 				'type' => 'text',
-				'text' => กากมาก
+				'text' => กากมากกกกก
+			];}
+			
+			if($text == 'พี่บอย'){
+				$messages = [
+				'type' => 'text',
+				'text' => แฟนก้อง
+			];}
+			
+			if($text == 'บอย'){
+				$messages = [
+				'type' => 'text',
+				'text' => แฟนก้อง
 			];}
 			
 			//else{$messages = [
