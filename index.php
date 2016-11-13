@@ -17,18 +17,11 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			//if($text == ก้อง ){ 
-			//$messages = [
-			//'type' => 'text',	
-			//'text' => กาก
-			//]
-//}
-			//else{
 			$messages = [
-			'type' => 'text',	
-			'text' => $text
-//}
-				
+				'type' => 'text',
+				'text' => $text
+			];
+
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
