@@ -56,8 +56,25 @@ if (!is_null($events['events'])) {
 			if($text == 'บอย'){
 				$messages = [
 				'type' => 'text',
-				'text' => 'แฟนก้อง 
-				อุ้ย ลืมไป ไม่ใช่แฟน แต่อัพเกรดเป็น ผัว แล้ว'
+				'text' => แฟนก้อง  <br/> อุุ้ย ลืมไป ไม่ใช่แฟน แต่อัพเกรดเป็น ผัว แล้ว
+			];}
+			
+			if($text == 'ฝันดี'){
+				$messages = [
+				'type' => 'text',
+				'text' => ฝันดีเช่นกันนะจ๊ะ
+			];}
+			
+			if($text == 'ฝันดีนะ'){
+				$messages = [
+				'type' => 'text',
+				'text' => ฝันดีจ๊ะ
+			];}
+			
+			if($text == 'อีน็อต'){
+				$messages = [
+				'type' => 'text',
+				'text' => พูดมาก
 			];}
 			
 			//else{$messages = [
