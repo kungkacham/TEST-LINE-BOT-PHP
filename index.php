@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
 			if($text == 'พี่บอย'){
 				$messages = [
 				'type' => 'text',
-				'text' => แฟนก้อง
+				'text' => แฟนก้อง ห้ามยุ่ง
 			];}
 			
 			if($text == 'บอย'){
