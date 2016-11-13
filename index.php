@@ -10,5 +10,5 @@ $text = $jsonObj->{"result"}[0]->{"content"}->{"text"};
 $text_ex = explode(':', $text);
 
 
-}
+
 echo "OK";
