@@ -29,6 +29,12 @@ if (!is_null($events['events'])) {
 				'text' => โคตรกาก
 			];}
 			
+			if($text == 'พี่หน่อง'){
+				$messages = [
+				'type' => 'text',
+				'text' => เจ้านายผม
+			];}
+			
 			//else{$messages = [
 			//	'type' => 'text',
 			//	'text' => $text}
