@@ -9,8 +9,6 @@ $to = $jsonObj->{"result"}[0]->{"content"}->{"from"};
 $text = $jsonObj->{"result"}[0]->{"content"}->{"text"};
 $text_ex = explode(':', $text);
 $response_format_text = ['contentType'=>1,"toType"=>1,"text"=>$result_text];
-if($text_ex[0] == "ก้อง"){
-$response_format_text = ['contentType'=>1,"toType"=>1,"text"=>"กาก"];
-}
+
 }
 echo "OK";
