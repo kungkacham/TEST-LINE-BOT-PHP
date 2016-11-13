@@ -77,6 +77,13 @@ if (!is_null($events['events'])) {
 				'text' => พูดมาก
 			];}
 			
+			if($text == 'นอนเถอะ'){
+				$messages = [
+				'type' => 'text',
+				'text' => ช่ายควรนอนได้แล้ว จะได้ไม่เป็นภาระของดวงตา
+			];}
+			
+			
 			//else{$messages = [
 			//	'type' => 'text',
 			//	'text' => $text}
