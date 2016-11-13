@@ -1,106 +1,44 @@
 <?php
 $access_token = 'QkERSr95E8xPvTP40mlaIZsY7hBwDKusWmPcp3jChPSxaUF/KNcs8RaVJiThluW6fAHh8jE4vnvsKiHxNnggvcbOtmYk0WHE4FgeNIavK/7F9ypKAHliyjFoK/xlhDHlpy5DJy5rUCKiGgQOVdGbYgdB04t89/1O/w1cDnyilFU=';
 
-// Get POST body content
-$content = file_get_contents('php://input');
-// Parse JSON
-$events = json_decode($content, true);
-// Validate parsed JSON data
-if (!is_null($events['events'])) {
-	// Loop through each event
-	foreach ($events['events'] as $event) {
-		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			// Get text sent
-			$text = $event['message']['text'];
-			// Get replyToken
-			$replyToken = $event['replyToken'];
-
-			// Build message to reply back
-			if($text == 'ก้อง' || $text == 'ชาติ'|| $text == 'อั้ม'|| $text == 'ลุง'){
-				$messages = [
-				'type' => 'text',
-				'text' => กาก
-			];}
-			
-			if($text == 'บอส'){
-				$messages = [
-				'type' => 'text',
-				'text' => โคตรกาก
-			];}
-			
-			if($text == 'พี่หน่อง'){
-				$messages = [
-				'type' => 'text',
-				'text' => เจ้านายผม
-			];}
-			
-			if($text == 'หน่อง'){
-				$messages = [
-				'type' => 'text',
-				'text' => เจ้านายผม
-			];}
-			
-			if($text == 'ก่ายก้อง'){
-				$messages = [
-				'type' => 'text',
-				'text' => กากมากกกกก
-			];}
-			
-			if($text == 'พี่บอย'){
-				$messages = [
-				'type' => 'text',
-				'text' => "แฟนก้อง ห้ามยุ่งเด็ดขาด"
-			];}
-			
-			if($text == 'บอย'){
-				$messages = [
-				'type' => 'text',
-				'text' => "ผัวก้อง ห้ามยุ่งนะ"
-			];}
-			
-			if($text == 'ฝันดี'){
-				$messages = [
-				'type' => 'text',
-				'text' => ฝันดีเช่นกันนะจ๊ะ
-			];}
-			
-			if($text == 'ฝันดีนะ'){
-				$messages = [
-				'type' => 'text',
-				'text' => ฝันดีจ๊ะ
-			];}
-			
-			if($text == 'อีน็อต'){
-				$messages = [
-				'type' => 'text',
-				'text' => พูดมาก
-			];}
-			
-			//else{$messages = [
-			//	'type' => 'text',
-			//	'text' => $text}
-
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
-
-			echo $result . "\r\n";
-		}
-	}
-}
+$channelId = "取得したアカウントのChannel ID";
+$channelSecret = "取得したアカウントのChannel Secret";
+$mid = "取得したアカウントのMID";
+$param = preg_replace('/\/$/', '', $_SERVER['REQUEST_URI']);
+$handle = fopen('php://input','r');
+$inputJson = fgets($handle);
+$json = json_decode($inputJson,true);
+$resultJsonArray = $json["result"];
+$resultJson = $resultJsonArray[0];
+$content = $resultJson["content"];
+$from = $content ['from'];
+$sendMessage = $content ['text'];
+$returnJsonContents = array ( 'to' => array($from),
+    'toChannel' => '1383378250',
+    'eventType' => '138311608800106203',
+    'content' => array(
+        'contentType' => 1,
+        'toType' => 1,
+        'text' => $sendMessage
+    )
+);
+ 
+$headerString = 
+    'Content-type:application/json; charser=UTF-8' . "\r\n"
+    . 'X-Line-ChannelID:' . $channelId . "\r\n"
+    . 'X-Line-ChannelSecret:' . $channelSecret . "\r\n"
+    . 'X-Line-Trusted-User-With-ACL:' . $mid . "\r\n";
+$url ='https://trialbot-api.line.me/v1/events';
+ 
+$options = array(
+    'http' => array(
+        'method' => 'POST',
+        'header' => $headerString,
+        'content' => json_encode($returnJsonContents)
+    )
+);
+ 
+$context = stream_context_create($options);
+file_get_contents( $url, false, $context );
+exit;
 echo "OK";
