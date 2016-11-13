@@ -17,10 +17,16 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			if($text == 'ก้อง'){
+			if($text == 'ก้อง' || $text == 'ชาติ'|| $text == 'อั้ม'|| $text == 'ลุง'){
 				$messages = [
 				'type' => 'text',
 				'text' => กาก
+			];}
+			
+			if($text == 'บอส'){
+				$messages = [
+				'type' => 'text',
+				'text' => โคตรกาก
 			];}
 			
 			//else{$messages = [
