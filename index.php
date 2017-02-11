@@ -34,7 +34,34 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => setlastpoint
 			];}
-			
+//			
+			namespace LINE\Tests\LINEBot;
+			use LINE\LINEBot\Response;
+			class ResponseTest extends \PHPUnit_Framework_TestCase
+{
+			public function testGetHeader()
+    {
+			$response = new Response(200, '{"body":"text"}', [
+            'Content-Type' => 'application/json',
+            'Content-Length' => '15',
+			]);
+			$this->assertEquals('application/json', $response->getHeader('Content-Type'));
+			$this->assertEquals('15', $response->getHeader('Content-Length'));
+			$this->assertNull($response->getHeader('Not-Exists'));
+    }
+			public function testGetHeaders()
+    {
+			$response = new Response(200, '{"body":"text"}', [
+            'Content-Type' => 'application/json',
+            'Content-Length' => '15',
+			]);
+			$headers = $response->getHeaders();
+			$this->assertEquals(2, count($headers));
+			$this->assertEquals('application/json', $headers['Content-Type']);
+			$this->assertEquals('15', $headers['Content-Length']);
+    }
+}
+//			
 			//else{$messages = [
 			//	'type' => 'text',
 			//	'text' => $text}
