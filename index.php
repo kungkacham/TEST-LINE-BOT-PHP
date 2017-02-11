@@ -17,34 +17,22 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			if($text == 'ก้อง' || $text == 'ชาติ'|| $text == 'อั้ม'|| $text == 'ลุง'){
+			//if($text == 'ก้อง' || $text == 'ชาติ'|| $text == 'อั้ม'|| $text == 'ลุง'){
+			//	$messages = [
+			//	'type' => 'text',
+			//	'text' => กาก
+			//];}
+			
+			if($text == '.'){
 				$messages = [
 				'type' => 'text',
-				'text' => กาก
+				'text' => viewlastseen
 			];}
 			
-			if($text == 'บอส'){
+			if($text == '..'){
 				$messages = [
 				'type' => 'text',
-				'text' => โคตรกาก
-			];}
-			
-			if($text == 'พี่หน่อง'){
-				$messages = [
-				'type' => 'text',
-				'text' => เจ้านายผม
-			];}
-			
-			if($text == 'หน่อง'){
-				$messages = [
-				'type' => 'text',
-				'text' => เจ้านายผม
-			];}
-			
-			if($text == 'ก่ายก้อง'){
-				$messages = [
-				'type' => 'text',
-				'text' => กากมาก
+				'text' => setlastpoint
 			];}
 			
 			//else{$messages = [
