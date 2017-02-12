@@ -47,12 +47,6 @@ if (!is_null($events['events'])) {
 				'text' =>  จ๊ะเอ๋
 			];}
 			
-			if(strstr($text,'กรูด')){
-				$messages = [
-				'type' => 'text',
-				'text' =>  เนตรกาก
-			];}	
-						
 			//if(strstr($text,'Set the lastseens')){
 			//	$messages = [
 			//	'type' => 'sticker',
