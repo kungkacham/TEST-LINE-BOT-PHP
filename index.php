@@ -47,6 +47,12 @@ if (!is_null($events['events'])) {
 				'text' =>  จ๊ะเอ๋
 			];}
 			
+			if($text == '...'){
+				$messages = [
+				'type' => 'text',
+				'text' => จุด 3 จุด
+			];}		
+			
 			//if(strstr($text,'Set the lastseens')){
 			//	$messages = [
 			//	'type' => 'sticker',
