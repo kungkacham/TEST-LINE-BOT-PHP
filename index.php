@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
 			if($text == '...'){
 				$messages = [
 				'type' => 'text',
-				'text' => จุด 3 จุด
+				'text' => จุดจุดจุด
 			];}		
 			
 			//if(strstr($text,'Set the lastseens')){
