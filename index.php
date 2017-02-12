@@ -46,6 +46,12 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' =>  จ๊ะเอ๋
 			];}
+			
+			if($text == 'มะกรูด' || $text == 'มะกรูด  ' || $text == 'มะกรูด.' || $text == ' มะกรูด '){
+				$messages = [
+				'type' => 'text',
+				'text' => เนตรชอบผู้ชาย สนใจทักได้เลย
+			];}		
 						
 			//if(strstr($text,'Set the lastseens')){
 			//	$messages = [
