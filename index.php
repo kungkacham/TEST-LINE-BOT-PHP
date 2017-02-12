@@ -23,13 +23,13 @@ if (!is_null($events['events'])) {
 			//	'text' => กาก
 			//];}
 			
-			if($text == 'view' || $text == 'view ' || $text == 'View' || $text == 'View ' || $text == '.'){
+			if($text == 'v' || $text == 'v ' || $text == 'V' || $text == 'V ' || $text == 'view' || $text == 'view ' || $text == 'View' || $text == 'View ' || $text == '.'){
 				$messages = [
 				'type' => 'text',
 				'text' => viewlastseen
 			];}
 			
-			if($text == 'set' || $text == 'set ' || $text == 'Set' || $text == 'Set ' || $text == '..'){
+			if($text == 's' || $text == 's ' || $text == 'S' || $text == 'S ' || $text == 'set' || $text == 'set ' || $text == 'Set' || $text == 'Set ' || $text == '..'){
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
@@ -39,6 +39,12 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
+			];}
+			
+			if(strstr($text,'Set the lastseens')){
+				$messages = [
+				'type' => 'text',
+				'text' => จ๊ะเอ๋...
 			];}
 						
 			//if(strstr($text,'Set the lastseens')){
