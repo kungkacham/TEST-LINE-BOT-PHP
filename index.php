@@ -47,11 +47,11 @@ if (!is_null($events['events'])) {
 				'text' =>  จ๊ะเอ๋
 			];}
 			
-			if($text == 'มะกรูด' || $text == 'มะกรูด  ' || $text == 'มะกรูด.' || $text == ' มะกรูด '){
+			if(strstr($text,'มะกรูด')){
 				$messages = [
 				'type' => 'text',
-				'text' => เนตรชอบผู้ชาย สนใจทักได้เลย
-			];}		
+				'text' =>  เนตรกาก
+			];}	
 						
 			//if(strstr($text,'Set the lastseens')){
 			//	$messages = [
