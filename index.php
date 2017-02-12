@@ -34,11 +34,22 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => setlastpoint
 			];}		
+			
+			
 
 			if(strstr($text,'have seen at the lastseen point')){
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
+				$sticker_content = <<< EOM
+				"contentType":8,
+				"contentMetadata":{
+				"STKID":"100",
+				"STKPKGID":"1",
+				"STKVER":"100"
+				}
+EOM;
+				$content = $sticker_content
 			];}
 							
 			//else{$messages = [
@@ -67,5 +78,9 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
+
+
+
+
 
 echo "OK";
