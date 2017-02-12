@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
 				'text' => setlastpoint
 			];}
 			
-			if(strstr($text,'Set the lastseens' point')){
+			if(strstr($text,'Set the lastseens')){
 				$messages = [
 				'type' => "sticker',
 				"contentType":8,
