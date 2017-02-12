@@ -23,13 +23,13 @@ if (!is_null($events['events'])) {
 			//	'text' => กาก
 			//];}
 			
-			if($text == 'view' || $text == 'view ' || $text == '.'){
+			if($text == 'view' || $text == 'view ' || $text == 'View' || $text == 'View ' || $text == '.'){
 				$messages = [
 				'type' => 'text',
 				'text' => viewlastseen
 			];}
 			
-			if($text == 'set' || $text == 'set '  || $text == '..'){
+			if($text == 'set' || $text == 'set ' || $text == 'Set' || $text == 'Set ' || $text == '..'){
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
@@ -40,14 +40,14 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => setlastpoint
 			];}
-			
-			if(strstr($text,'Set the lastseens')){
-				$messages = [
-				'type' => 'sticker',
-				'STKID' => '100',
-				'STKPKGID' => '1',
-				'STKVER' => '100'
-			];}
+						
+			//if(strstr($text,'Set the lastseens')){
+			//	$messages = [
+			//	'type' => 'sticker',
+			//	'STKID' => '100',
+			//	'STKPKGID' => '1',
+			//	'STKVER' => '100'
+			//];}
 			
 			//else{$messages = [
 			//	'type' => 'text',
