@@ -40,6 +40,12 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => setlastpoint
 			];}
+			
+			if(strstr($text,'ใครอ่าน')){
+				$messages = [
+				'type' => 'text',
+				'text' => ผมอ่านหนึ่งคน ขอรับ \n \n ถ้ามากกว่าหนึ่งคน ก็ไม่ใช่ผม ขอรับ ^_^
+			];}
 				
 			//else{$messages = [
 			//	'type' => 'text',
@@ -67,10 +73,5 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-
-
-
-
-
 
 echo "OK";
