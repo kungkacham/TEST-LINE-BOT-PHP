@@ -23,12 +23,6 @@ if (!is_null($events['events'])) {
 			//	'text' => กาก
 			//];}
 			
-			if($text == 'viewlastseen'){
-				$messages = [
-				'type' => 'text',
-				'text' => setlastpoint
-			];}	
-			
 			if($text == 'view' || $text == '.'){
 				$messages = [
 				'type' => 'text',
