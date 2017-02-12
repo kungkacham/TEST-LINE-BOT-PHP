@@ -45,13 +45,9 @@ if (!is_null($events['events'])) {
 			
 			if(strstr($text,'Set the lastseens')){
 				$messages = [
-				'type' => "sticker',
-				"contentType":8,
-				"contentMetadata":{
-				"STKID":"100",
-				"STKPKGID":"1",
-				"STKVER":"100"
-				}
+				"type" => "sticker",
+				"packageId": "1",
+				"stickerId": "1"
 			];}
 			
 			//else{$messages = [
