@@ -44,7 +44,7 @@ if (!is_null($events['events'])) {
 			if(strstr($text,'Set the lastseens')){
 				$messages = [
 				'type' => 'text',
-				'text' => จ๊ะเอ๋...
+				'text' =>  จ๊ะเอ๋
 			];}
 						
 			//if(strstr($text,'Set the lastseens')){
