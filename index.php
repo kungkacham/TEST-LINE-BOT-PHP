@@ -41,17 +41,19 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
-				$sticker_content = <<< EOM
+			];}
+			
+			if(strstr($text,'Set the lastseens' point')){
+				$messages = [
+				'type' => "sticker',
 				"contentType":8,
 				"contentMetadata":{
 				"STKID":"100",
 				"STKPKGID":"1",
 				"STKVER":"100"
 				}
-EOM;
-				$content = $sticker_content
 			];}
-							
+			
 			//else{$messages = [
 			//	'type' => 'text',
 			//	'text' => $text}
