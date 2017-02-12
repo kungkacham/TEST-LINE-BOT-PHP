@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 				'text' =>  จ๊ะเอ๋
 			];}
 			
-			if(strstr($text,'มะกรูด')){
+			if(strstr($text,'กรูด')){
 				$messages = [
 				'type' => 'text',
 				'text' =>  เนตรกาก
