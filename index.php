@@ -23,13 +23,13 @@ if (!is_null($events['events'])) {
 			//	'text' => กาก
 			//];}
 			
-			if($text == 'view' || $text == '.'){
+			if($text == 'view' || $text == 'view ' || $text == '.'){
 				$messages = [
 				'type' => 'text',
 				'text' => viewlastseen
 			];}
 			
-			if($text == 'set' || $text == '..'){
+			if($text == 'set' || $text == 'set '  || $text == '..'){
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
@@ -40,13 +40,7 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => setlastpoint
 			];}
-			
-			if(strstr($text,'ใครอ่าน')){
-				$messages = [
-				'type' => 'text',
-				'text' => ผมอ่านหนึ่งคน ขอรับ  ถ้ามากกว่าหนึ่งคน ก็ไม่ใช่ผม ขอรับ ^_^
-			];}
-				
+							
 			//else{$messages = [
 			//	'type' => 'text',
 			//	'text' => $text}
