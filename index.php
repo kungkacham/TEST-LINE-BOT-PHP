@@ -41,23 +41,12 @@ if (!is_null($events['events'])) {
 				'text' => setlastpoint
 			];}		
 
-			if(strstr($text,'lastseen')){
+			if(strstr($text,'have seen at the lastseen point')){
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
 			];}
-
-
-
-
-
-
-
-
-
-
-			
-		
+				
 			//else{$messages = [
 			//	'type' => 'text',
 			//	'text' => $text}
