@@ -39,7 +39,24 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
-			];}			
+			];}		
+
+			if(strstr($text,'lastseen')){
+				$messages = [
+				'type' => 'text',
+				'text' => setlastpoint
+			];}
+
+
+
+
+
+
+
+
+
+
+			
 		
 			//else{$messages = [
 			//	'type' => 'text',
@@ -67,5 +84,10 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
+
+
+
+
+
 
 echo "OK";
