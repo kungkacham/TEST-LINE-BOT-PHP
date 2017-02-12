@@ -76,45 +76,6 @@ if (!is_null($events['events'])) {
 	}
 }
 
-private function check_message_type($rcv_message) {
-
-    //line id($rcv_message->from)からユーザ情報を読み出す
-    $result_text = $this->ncmb_get_user($rcv_message->from);
-
-    switch ($rcv_message->contentType) {
-        case 1: // TEXT
-            $result_text .= "\n"."「".$rcv_message->text."」ですね！";
-            break;
-        case 2: // Image
-            $result_text .= "\n"."写真 ですね！";
-            break;
-        case 3: // Video
-            $result_text .= "\n"."ビデオ ですね！";
-            break;
-        case 4: // Audio
-            $result_text .= "\n"."音声メモ ですね！";
-            break;
-        case 7: // Location
-            $result_text .= "\n"."あなたの現在地は ".$rcv_message->location->address;
-            $result_text .= "\n"."緯度経度は(".(string)$rcv_message->location->latitude;
-            $result_text .= ",".(string)$rcv_message->location->longitude.")ですね。";
-            break;
-        case 8: // Sticker
-            //STKPKGIDとSTKIDからスタンプを判定
-            $result_text .= $this->check_sticker((string)$rcv_message->contentMetadata->STKPKGID,
-                                          (string)$rcv_message->contentMetadata->STKID);
-            break;
-        case 10: // Contact
-            $result_text .= "\n".".mid=".(string)$rcv_message->contentMetadata->mid;
-            $result_text .= "\n".".displayName=".(string)$rcv_message->contentMetadata->displayName;
-            break;
-        default :
-            break;
-    }
-
-    return $result_text;
-
-}
 
 
 
