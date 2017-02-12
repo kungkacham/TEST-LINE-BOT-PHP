@@ -35,8 +35,6 @@ if (!is_null($events['events'])) {
 				'text' => setlastpoint
 			];}		
 			
-			
-
 			if(strstr($text,'have seen at the lastseen point')){
 				$messages = [
 				'type' => 'text',
@@ -45,9 +43,10 @@ if (!is_null($events['events'])) {
 			
 			if(strstr($text,'Set the lastseens')){
 				$messages = [
-				"type" => "sticker",
-				"packageId": "1",
-				"stickerId": "1"
+				'type' => 'sticker',
+				'STKID' => '100',
+				'STKPKGID' => '1',
+				'STKVER' => '100'
 			];}
 			
 			//else{$messages = [
