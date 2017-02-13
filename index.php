@@ -50,13 +50,13 @@ if (!is_null($events['events'])) {
 				'text' => $output
 			];}
 			
-			$array = array('Hi', 'ไม่ดี', 'Hello', 'สวัสดี', 'สวัสดีครับ', 'สวัสดีค่ะ', 'สวัสดีจ้า', 'สวีดัส สวัสดี', 'สวัสดีจ๊ะ');
-			$output = $array[array_rand($array ,1)];
+			$array1 = array('Hi', 'ไม่ดี', 'Hello', 'สวัสดี', 'สวัสดีครับ', 'สวัสดีค่ะ', 'สวัสดีจ้า', 'สวีดัส สวัสดี', 'สวัสดีจ๊ะ');
+			$output1 = $array1[array_rand($array1 ,1)];
 		
 			if(strstr($text,'ดี'){
 				$messages = [
 				'type' => 'text',
-				'text' => $output
+				'text' => $output1
 			];}
 			
 			if($text == '...'){
