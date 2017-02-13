@@ -45,8 +45,9 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'text',
 				$array = array("จ๊ะเอ๋", "สวัสดี", "กาก", "มะกรูด", "แอแฮร่", "มาคุยกัน", "ออกมานะ", "จับได้แล้ว", "มีแป้นพิมพ์ไหม", "คุยได้ไม่กัด");
-			    $output = array_rand($array ,1);
-				'text' => $array[$output[0]]
+			    $input = array_rand($array ,1);
+				$output = $array[$input[0]]
+				'text' => $output
 			];}
 			
 			if($text == '...'){
