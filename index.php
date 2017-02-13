@@ -42,21 +42,12 @@ if (!is_null($events['events'])) {
 			];}
 			
 			$array = array('Hi', 'Hello', 'สวัสดีประเทศไทย', 'พักแป๊ป', 'พักแพร๊บ', 'จ๊ะเอ๋', 'สวัสดี', 'สวัสดีครับ', 'สวัสดีค่ะ', 'สวัสดีจ้า', 'สวีดัส สวัสดี', 'สวัสดีจ๊ะ', 'กาก', 'มะกรูด', 'แอแฮร่', 'มาคุยกัน', 'ออกมานะ', 'จับได้แล้ว', 'มีแป้นพิมพ์ไหม', 'คุยได้ไม่กัด แต่จะกัด ถ้าไม่คุย');
-			$output = $array[array_rand($array ,1)];
+			$output = $array[array_rand($array,1)];
 		
 			if(strstr($text,'Set the lastseens')){
 				$messages = [
 				'type' => 'text',
 				'text' => $output
-			];}
-			
-			$array1 = array('Hi', 'ไม่ดี', 'Hello', 'สวัสดี', 'สวัสดีครับ', 'สวัสดีค่ะ', 'สวัสดีจ้า', 'สวีดัส สวัสดี', 'สวัสดีจ๊ะ');
-			$output1 = $array1[array_rand($array1 ,1)];
-		
-			if(strstr($text,'ดี'){
-				$messages = [
-				'type' => 'text',
-				'text' => $output1
 			];}
 			
 			if($text == '...'){
