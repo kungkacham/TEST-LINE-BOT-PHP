@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 			if(strstr($text,'Set the lastseens')){
 				$messages = [
 				'type' => 'text',
-				'text' =>  $output
+				'text' => $array[ $output[0] ]
 			];}
 			
 			if($text == '...'){
