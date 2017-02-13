@@ -41,13 +41,12 @@ if (!is_null($events['events'])) {
 				'text' => setlastpoint
 			];}
 			
-			$array = array("จ๊ะเอ๋", "สวัสดี", "กาก", "มะกรูด", "แอแฮร่", "มาคุยกัน", "ออกมานะ", "จับได้แล้ว", "มีแป้นพิมพ์ไหม", "คุยได้ไม่กัด");
-			$output = array_rand( $array , 1 );
-			
 			if(strstr($text,'Set the lastseens')){
 				$messages = [
 				'type' => 'text',
-				'text' => $array[ $output[0] ]
+				$array = array("จ๊ะเอ๋", "สวัสดี", "กาก", "มะกรูด", "แอแฮร่", "มาคุยกัน", "ออกมานะ", "จับได้แล้ว", "มีแป้นพิมพ์ไหม", "คุยได้ไม่กัด");
+			    $output = array_rand($array ,1);
+				'text' => $array[$output[0]]
 			];}
 			
 			if($text == '...'){
