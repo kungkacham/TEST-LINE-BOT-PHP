@@ -56,6 +56,16 @@ if (!is_null($events['events'])) {
 				'text' => จุดจุดจุด
 			];}		
 			
+			if(strstr($text,'กลุ่มอะไร')){
+				$messages = [
+				'type' => 'text',
+				'text' => กลุ่มส่งใบโคลเวอร์เกมเศรษฐีครับ
+				
+			if(strstr($text,'ห้องอะไร')){
+				$messages = [
+				'type' => 'text',
+				'text' => ห้องส่งใบโคลเวอร์เกมเศรษฐีครับ
+			
 			//if(strstr($text,'Set the lastseens')){
 			//	$messages = [
 			//	'type' => 'sticker',
