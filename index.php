@@ -68,6 +68,25 @@ if (!is_null($events['events'])) {
 				'text' => ห้องส่งใบโคลเวอร์เกมเศรษฐีครับ
 			];}	
 			
+			
+			$arrayy = array('สวัสดีครับ', 'สวัสดีค่ะ', 'ดีครับ', 'ดีค่ะ', 'ดีคับ');
+			$outputt = $arrayy[array_rand($arrayy,1)];
+		
+			if($text == 'สวัสดี' || $text == 'สวัสดีครับ' || $text == 'ดีครับ' || $text == 'ดีคับ' || $text == 'สวัสดีค่ะ' || $text == 'ดีค่ะ'){
+				$messages = [
+				'type' => 'text',
+				'text' => $outputt
+			];}		
+			
+			$arrayyy = array('ฝันดีครับ', 'ฝันดีค่ะ', 'นอนหลับฝันดีนะ', 'Sweet dreams.', 'Good Night', 'GN', 'ฝันดีผีกัดตูด', 'ราตรีสวัสดิ์');
+			$outputtt = $arrayyy[array_rand($arrayyy,1)];
+		
+			if($text == 'ฝันดี' || $text == 'นอนแล้วนะ' || $text == 'นอนดีกว่า' || $text == 'นอนก่อนนะ' || $text == 'ขอตัวนอนก่อนนะ' || $text == 'ฝันดีทุกคน' || $text == 'ฝันดี ทุกคน'){
+				$messages = [
+				'type' => 'text',
+				'text' => $outputtt
+			];}	
+			
 			//if(strstr($text,'Set the lastseens')){
 			//	$messages = [
 			//	'type' => 'sticker',
