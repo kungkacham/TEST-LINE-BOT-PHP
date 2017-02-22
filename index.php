@@ -106,7 +106,25 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => ฝันดี
 			];}
-								
+			
+			if(strstr($text,'ดีคับ')){
+				$messages = [
+				'type' => 'text',
+				'text' => สวัสดีครับ
+			];}
+					
+			if(strstr($text,'ดีครับ')){
+				$messages = [
+				'type' => 'text',
+				'text' => สวัสดีครับ
+			];}
+			
+			if(strstr($text,'ดีค่ะ')){
+				$messages = [
+				'type' => 'text',
+				'text' => สวัสดีค่ะ
+			];}
+							
 			//if(strstr($text,'Set the lastseens')){
 			//	$messages = [
 			//	'type' => 'sticker',
