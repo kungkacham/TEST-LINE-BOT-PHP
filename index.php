@@ -23,18 +23,10 @@ if (!is_null($events['events'])) {
 			//	'text' => กาก
 			//];}
 			
-			if($text == 'v' || $text == 'v ' || $text == 'V' || $text == 'V ' || $text == 'view' || $text == 'view ' || $text == 'View' || $text == 'View ' || $text == '.'){
-				$messages = [
-				'type' => 'text',
-				'text' => viewlastseen
-			];} elseif(strstr($text,'ดีค่ะ')){
-				$messages = [
+			$messages = [
 				'type' => 'text',
 				'text' => สวัสดีค่ะ
-			];} else{$messages = [
-			'type' => 'text',
-			'text' => $text}
-
+			]
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
