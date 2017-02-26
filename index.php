@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
 				'text' => $output
 			];}
 			
-			if(strstr($text,'บอทกาก')){
+			elseif(strstr($text,'บอทกาก')){
 			$messages = [
 				'type' => 'text',
 				'text' => ใครกันแน่ที่กาก
