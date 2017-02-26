@@ -6,15 +6,17 @@ $token = 'QkERSr95E8xPvTP40mlaIZsY7hBwDKusWmPcp3jChPSxaUF/KNcs8RaVJiThluW6fAHh8j
 
 function postMessage($token,$packet,$urlReply){
  $dataEncode = json_encode($packet);
- $headersOption = array(‘Content-Type: application/json’,’Authorization: Bearer ‘.$token);
+ $headersOption = array('Content-Type: application/json','Authorization: Bearer '.$token);
+ 
  $ch = curl_init($urlReply);
- curl_setopt($ch,CURLOPT_CUSTOMREQUEST,’POST’);
+ curl_setopt($ch,CURLOPT_CUSTOMREQUEST,"POST");
  curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
  curl_setopt($ch,CURLOPT_POSTFIELDS,$dataEncode);
  curl_setopt($ch,CURLOPT_HTTPHEADER,$headersOption);
  curl_setopt($ch,CURLOPT_FOLLOWLOCATION,1);
  $result = curl_exec($ch);
  curl_close($ch);
+ echo $result . "\r\n";
 }
 
 function getSticker($replyToken){
