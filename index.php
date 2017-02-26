@@ -5,20 +5,6 @@ $access_token = 'QkERSr95E8xPvTP40mlaIZsY7hBwDKusWmPcp3jChPSxaUF/KNcs8RaVJiThluW
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-
-function getSticker($replyToken){
- $sticker = array(
- ‘type’ => ‘sticker’,
- ‘packageId’ => ‘4’,
- ‘stickerId’ => ‘300’
- );
- $packet = array(
- ‘replyToken’ => $replyToken,
- ‘messages’ => array($sticker),
- );
- return $packet;
-}
-
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -36,16 +22,20 @@ if (!is_null($events['events'])) {
 			//	'type' => 'text',
 			//	'text' => กาก
 			//];}
-
-			$packet = getSticker($item[‘replyToken’]);
+			
+			if($text == $text){
+				$messages = [
+				'type' => 'text',
+				'text' => $text
+			];}		
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			//$data = [
-			//	'replyToken' => $replyToken,
-			//	'messages' => array($sticker),
-			//];
-			$post = json_encode($packet);
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages],
+			];
+			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
