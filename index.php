@@ -22,15 +22,12 @@ if (!is_null($events['events'])) {
 			//	'type' => 'text',
 			//	'text' => กาก
 			//];}
-			
-			//if($text == $text){
+
 			$sticker = array(
-			'type' => 'sticker',
-			'STKID' => '100',
-			'STKPKGID' => '1',
-			'STKVER' => '100'
-			);
-			//}		
+			‘type’ => ‘sticker’,
+			‘packageId’ => ‘4’,
+			‘stickerId’ => ‘300’
+			);	
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
@@ -50,7 +47,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			//echo $result . "\r\n";
+			echo $result . "\r\n";
 		}
 		elseif ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
 			// Get text sent
