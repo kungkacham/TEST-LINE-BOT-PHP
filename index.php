@@ -35,7 +35,9 @@ if(isset($res[‘events’]) && !is_null($res[‘events’])){
  foreach($res[‘events’] as $item){
  if($item[‘type’] == ‘message’){
  switch($item[‘message’][‘type’]){
- case ‘text’:
+ case ‘text’:	
+	$packet = getSticker($item[‘replyToken’]);
+	postMessage($token,$packet,$urlReply);
  break;
  case ‘image’:
  break;
@@ -46,8 +48,8 @@ if(isset($res[‘events’]) && !is_null($res[‘events’])){
  case ‘location’:
  break;
  case ‘sticker’: 
-				$packet = getSticker($item[‘replyToken’]);
-				postMessage($token,$packet,$urlReply);
+	$packet = getSticker($item[‘replyToken’]);
+	postMessage($token,$packet,$urlReply);
  break;
 }
 
