@@ -161,7 +161,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			//$sticker = $event['message']['sticker'];
 			// Get replyToken
-			//$replyToken = $event['replyToken'];
+			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			//if($text == 'ก้อง' || $text == 'ชาติ'|| $text == 'อั้ม'|| $text == 'ลุง'){
