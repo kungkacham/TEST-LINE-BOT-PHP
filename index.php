@@ -17,27 +17,25 @@ function postMessage($token,$packet,$urlReply){
  curl_close($ch);
 }
 
-{“events”:[{“type”:”message”,”replyToken”:”ไม่บอก”,”source”:{“userId”:”ไม่บอก”,”type”:”user”},”timestamp”:1477132643802,”message”:{“type”:”text”,”id”:”5094630491076",”text”:”ว่าไงท่าน”}}]}
 
-$res = json_decode($post, true);
+ // {“events”:[{“type”:”message”,”replyToken”:”ไม่บอก”,”source”:{“userId”:”ไม่บอก”,”type”:”user”},”timestamp”:1477132643802,”message”:{“type”:”text”,”id”:”5094630491076",”text”:”ว่าไงท่าน”}}]}
+
+ $res = json_decode($post,true);
 if(isset($res[‘events’]) && !is_null($res[‘events’])){
  foreach($res[‘events’] as $item){
  if($item[‘type’] == ‘message’){
  switch($item[‘message’][‘type’]){
  case ‘text’:
-break;
-case ‘image’:
-break;
+ break;
+ case ‘image’:
+ break;
  case ‘video’:
- 
  break;
  case ‘audio’:
- 
  break;
  case ‘location’:
-break;
+ break;
  case ‘sticker’:
-
  break;
 }
 
@@ -55,8 +53,6 @@ function getSticker($replyToken){
 }
 
 $packet = getSticker($item[‘replyToken’]);
- postMessage($token,$packet,$urlReply);
-
-
+postMessage($token,$packet,$urlReply);
 
 echo "OK";
