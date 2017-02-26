@@ -158,30 +158,10 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 		elseif ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
-			// Get text sent
-			//$sticker = $event['message']['sticker'];
+
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-
-			// Build message to reply back
-			//if($text == 'ก้อง' || $text == 'ชาติ'|| $text == 'อั้ม'|| $text == 'ลุง'){
-			//	$messages = [
-			//	'type' => 'text',
-			//	'text' => กาก
-			//];}
-							
-			//if(strstr($text,'Set the lastseens')){
-			//	$messages = [
-			//	'type' => 'sticker',
-			//	'STKID' => '100',
-			//	'STKPKGID' => '1',
-			//	'STKVER' => '100'
-			//];}
-			
-			//else{$messages = [
-			//	'type' => 'text',
-			//	'text' => $text}
-			
+					
 			//$sticker = array(
 			//'type' => 'sticker',
 			//'STKID' => '100',
@@ -189,31 +169,25 @@ if (!is_null($events['events'])) {
 			//'STKVER' => '100'
 			//);
 			
-			
 			//$sticker = array(
 			//‘type’ => ‘sticker’,
 			//‘packageId’ => ‘4’,
 			//‘stickerId’ => ‘300’
 			//);
-			
-			$messages = [
+		
+			$sticker = array(
 			‘type’ => ‘sticker’,
-			‘packageId’ => ‘1’,
-			‘stickerId’ => ‘1’
-			];
-			
-		//	$packet = array(
-		//	‘replyToken’ => $replyToken,
-		//	‘messages’ => array($sticker),
-		//	);
-
+			‘packageId’ => ‘4’,
+			‘stickerId’ => ‘300’
+			);
+ 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
+			$packet = array(
+			‘replyToken’ => $replyToken,
+			‘messages’ => array($sticker),
+			);
+			$post = json_encode($packet);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
