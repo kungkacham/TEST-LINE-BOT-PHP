@@ -17,6 +17,19 @@ function postMessage($token,$packet,$urlReply){
  curl_close($ch);
 }
 
+function getSticker($replyToken){
+ $sticker = array(
+ ‘type’ => ‘sticker’,
+ ‘packageId’ => ‘4’,
+ ‘stickerId’ => ‘300’
+ );
+ $packet = array(
+ ‘replyToken’ => $replyToken,
+ ‘messages’ => array($sticker),
+ );
+ return $packet;
+}
+
  $res = json_decode($post,true);
 if(isset($res[‘events’]) && !is_null($res[‘events’])){
  foreach($res[‘events’] as $item){
@@ -32,24 +45,9 @@ if(isset($res[‘events’]) && !is_null($res[‘events’])){
  break;
  case ‘location’:
  break;
- case ‘sticker’: getSticker($replyToken);
+ case ‘sticker’: $packet = getSticker($item[‘replyToken’]);
+ postMessage($token,$packet,$urlReply);
  break;
 }
-
-function getSticker($replyToken){
- $sticker = array(
- ‘type’ => ‘sticker’,
- ‘packageId’ => ‘4’,
- ‘stickerId’ => ‘300’
- );
- $packet = array(
- ‘replyToken’ => $replyToken,
- ‘messages’ => array($sticker),
- );
- return $packet;
-}
-
-$packet = getSticker($item[‘replyToken’]);
-postMessage($token,$packet,$urlReply);
 
 echo "OK";
