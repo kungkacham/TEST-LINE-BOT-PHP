@@ -196,11 +196,10 @@ if (!is_null($events['events'])) {
 			//‘stickerId’ => ‘300’
 			//);
 			
-			{
-				$messages = [
+			$messages = [
 				'type' => 'text',
 				'text' => สติ๊กเกอร์
-			];}
+			];
 			
 		//	$packet = array(
 		//	‘replyToken’ => $replyToken,
