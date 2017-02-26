@@ -45,8 +45,9 @@ if(isset($res[‘events’]) && !is_null($res[‘events’])){
  break;
  case ‘location’:
  break;
- case ‘sticker’: $packet = getSticker($item[‘replyToken’]);
- postMessage($token,$packet,$urlReply);
+ case ‘sticker’: 
+				$packet = getSticker($item[‘replyToken’]);
+				postMessage($token,$packet,$urlReply);
  break;
 }
 
