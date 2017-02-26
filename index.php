@@ -35,7 +35,7 @@ if(isset($res[‘events’]) && !is_null($res[‘events’])){
  break;
  case ‘location’:
  break;
- case ‘sticker’: getSticker
+ case ‘sticker’: getSticker ;
  break;
 }
 
