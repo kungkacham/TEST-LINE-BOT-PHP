@@ -25,9 +25,10 @@ if (!is_null($events['events'])) {
 			
 			if($text == $text){
 			$sticker = array(
-			‘type’ => ‘sticker’,
-			‘packageId’ => ‘4’,
-			‘stickerId’ => ‘300’
+			'type' => 'sticker',
+			'STKID' => '100',
+			'STKPKGID' => '1',
+			'STKVER' => '100'
 			);
 			}		
 			
