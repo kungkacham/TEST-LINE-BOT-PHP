@@ -159,7 +159,7 @@ if (!is_null($events['events'])) {
 		}
 		elseif ($event['type'] == 'message' && $event['message']['type'] == 'sticker') {
 			// Get text sent
-			$text = $event['message']['sticker'];
+			$sticker = $event['message']['sticker'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
