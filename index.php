@@ -161,7 +161,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			//$sticker = $event['message']['sticker'];
 			// Get replyToken
-			$replyToken = $event['replyToken'];
+			//$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			//if($text == 'ก้อง' || $text == 'ชาติ'|| $text == 'อั้ม'|| $text == 'ลุง'){
@@ -190,11 +190,17 @@ if (!is_null($events['events'])) {
 			//);
 			
 			
-			$sticker = array(
-			‘type’ => ‘sticker’,
-			‘packageId’ => ‘4’,
-			‘stickerId’ => ‘300’
-			);
+			//$sticker = array(
+			//‘type’ => ‘sticker’,
+			//‘packageId’ => ‘4’,
+			//‘stickerId’ => ‘300’
+			//);
+			
+			{
+				$messages = [
+				'type' => 'text',
+				'text' => สติ๊กเกอร์
+			];}
 			
 		//	$packet = array(
 		//	‘replyToken’ => $replyToken,
@@ -205,7 +211,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => array($sticker),
+				'messages' => [$messages],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
@@ -219,7 +225,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			//echo $result . "\r\n";
+			echo $result . "\r\n";
 		}
 	}
 }
