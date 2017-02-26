@@ -198,8 +198,8 @@ if (!is_null($events['events'])) {
 			
 			$messages = [
 			‘type’ => ‘sticker’,
-			‘packageId’ => ‘4’,
-			‘stickerId’ => ‘300’
+			‘packageId’ => ‘1’,
+			‘stickerId’ => ‘1’
 			];
 			
 		//	$packet = array(
