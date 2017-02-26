@@ -182,19 +182,19 @@ if (!is_null($events['events'])) {
 			//	'type' => 'text',
 			//	'text' => $text}
 			
-			$sticker = array(
-			'type' => 'sticker',
-			'STKID' => '100',
-			'STKPKGID' => '1',
-			'STKVER' => '100'
-			);
-			
-			
 			//$sticker = array(
-			//‘type’ => ‘sticker’,
-			//‘packageId’ => ‘4’,
-			//‘stickerId’ => ‘300’
+			//'type' => 'sticker',
+			//'STKID' => '100',
+			//'STKPKGID' => '1',
+			//'STKVER' => '100'
 			//);
+			
+			
+			$sticker = array(
+			‘type’ => ‘sticker’,
+			‘packageId’ => ‘4’,
+			‘stickerId’ => ‘300’
+			);
 			
 		//	$packet = array(
 		//	‘replyToken’ => $replyToken,
@@ -219,7 +219,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo $result . "\r\n";
+			//echo $result . "\r\n";
 		}
 	}
 }
