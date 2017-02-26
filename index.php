@@ -197,8 +197,9 @@ if (!is_null($events['events'])) {
 			//);
 			
 			$messages = [
-				'type' => 'text',
-				'text' => สติ๊กเกอร์
+			‘type’ => ‘sticker’,
+			‘packageId’ => ‘4’,
+			‘stickerId’ => ‘300’
 			];
 			
 		//	$packet = array(
