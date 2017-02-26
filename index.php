@@ -23,12 +23,120 @@ if (!is_null($events['events'])) {
 			//	'text' => กาก
 			//];}
 			
-			if($text == $text){
+			if($text == 'v' || $text == 'v ' || $text == 'V' || $text == 'V ' || $text == 'view' || $text == 'view ' || $text == 'View' || $text == 'View ' || $text == '.'){
 				$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => viewlastseen
+			];}
+			
+			elseif($text == 's' || $text == 's ' || $text == 'S' || $text == 'S ' || $text == 'set' || $text == 'set ' || $text == 'Set' || $text == 'Set ' || $text == '..'){
+				$messages = [
+				'type' => 'text',
+				'text' => setlastpoint
 			];}		
 			
+			elseif(strstr($text,'have seen at the lastseen point')){
+				$messages = [
+				'type' => 'text',
+				'text' => setlastpoint
+			];}
+			
+			$array = array('Hi', 'Hello', 'สวัสดีประเทศไทย', 'พักแป๊ป', 'พักแพร๊บ', 'จ๊ะเอ๋', 'สวัสดี', 'สวัสดีครับ', 'สวัสดีค่ะ', 'สวัสดีจ้า', 'สวีดัส สวัสดี', 'สวัสดีจ๊ะ', 'กาก', 'มะกรูด', 'แอแฮร่', 'มาคุยกัน', 'ออกมานะ', 'จับได้แล้ว', 'มีแป้นพิมพ์ไหม', 'คุยได้ไม่กัด แต่จะกัด ถ้าไม่คุย', 'คนพิมพ์น่ารัก', 'คนอ่านน่ารัก', 'ที่นี่ที่ไหน', 'กลุ่มหรือป่าช้า', 'ขอพักบ้างนะ อย่าใช้งานเยอะ', 'สนุกมากไหม มาลองทำเองดูสิ');
+			$output = $array[array_rand($array,1)];
+		
+			elseif(strstr($text,'Set the lastseens')){
+				$messages = [
+				'type' => 'text',
+				'text' => $output
+			];}
+			
+			elseif(strstr($text,'บอทกาก')){
+			$messages = [
+				'type' => 'text',
+				'text' => ใครกันแน่ที่กาก
+			];}
+			
+			$arrayyyy = array('เรียนมาน้อยสินะ เลยพิมพ์ได้แค่คำว่า กาก', 'ปมด้อยสินะ ถึงว่าคนอื่นกาก', 'ว่าคนอื่นกาก ก็กากเหมือนกันแหละว้า', 'กาก กาก กาก กาก กาก กาก กาก กาก กาก พอใจม่ะ', 'อย่าหาว่าสอนเลยนะ คำว่า กาก เค้าไว้ใช้เรียกคุณนั่นแหละ', 'ไม่ได้ไปกากบนหัวคุณสักหน่อย', 'พิมพ์คำอื่นไม่เป็นหรือไง', 'กากแล้วไง ไปยุ่งกับเค้าทำไม', 'ใครกันแน่ที่กาก', 'มั่นใจว่ากาก', 'กากแล้วทำไม', 'พ่อแม่ไม่รักสินะ ถึงว่าคนอื่น', 'กาก แล้วไง', 'มีปัญหาป่ะ', 'กาก ก๊าก กาก', 'กากจริง ๆ', 'เดินไปส่องกระจกสิ จะเจอกากกว่า', 'กาก', 'กอ อา กอ กาก', 'ขอบคุณ');
+			$outputttt = $arrayyyy[array_rand($arrayyyy,1)];
+			
+			elseif(strstr($text,'กาก')){
+			$messages = [
+				'type' => 'text',
+				'text' => $outputttt
+			];}
+			
+			elseif($text == '...'){
+				$messages = [
+				'type' => 'text',
+				'text' => จุดจุดจุด
+			];}		
+			
+			elseif(strstr($text,'กลุ่มอะไร')){
+				$messages = [
+				'type' => 'text',
+				'text' => กลุ่มส่งใบโคลเวอร์เกมเศรษฐีครับ
+			];}	
+				
+			elseif(strstr($text,'ห้องอะไร')){
+				$messages = [
+				'type' => 'text',
+				'text' => ห้องส่งใบโคลเวอร์เกมเศรษฐีครับ
+			];}	
+			
+			$arrayy = array('สวัสดีครับ', 'สวัสดีค่ะ', 'ดีครับ', 'ดีค่ะ', 'ดีคับ', 'หวัดดีคับ', 'หวัดดีครับ', 'หวัดดีค่ะ');
+			$outputt = $arrayy[array_rand($arrayy,1)];
+		
+			elseif($text == 'สวัสดี' || $text == 'สวัสดีครับ' || $text == 'ดีครับ' || $text == 'ดีคับ' || $text == 'สวัสดีค่ะ' || $text == 'ดีค่ะ' || $text == 'หวัดดีคับ' || $text == 'หวัดดีครับ' || $text == 'หวัดดีค่ะ'){
+				$messages = [
+				'type' => 'text',
+				'text' => $outputt
+			];}		
+			
+			$arrayyy = array('ฝันดีครับ', 'ฝันดีค่ะ', 'นอนหลับฝันดีนะ', 'Sweet dreams.', 'Good Night', 'GN', 'ฝันดีผีกัดตูด', 'ราตรีสวัสดิ์', 'นอนหลับฝันดี ฝันถึงเราด้วยนะ');
+			$outputtt = $arrayyy[array_rand($arrayyy,1)];
+		
+			elseif($text == 'ราตรีสวัสดิ์' || $text == 'ฝันดี' || $text == 'ง่วงล่ะ' || $text == 'ง่วงแล้ว' || $text == 'นอนกันเถอะ' || $text == 'นอนก่อนนะ' || $text == 'ขอตัวนอนก่อนนะ' || $text == 'ขอตัวนอนก่อน' || $text == 'นอนกันดีกว่า' || $text == 'นอนดีกว่า' || $text == 'พรุ่งนี้ตื่นเช้า' || $text == 'ฝันดีครับ' || $text == 'ฝันดีคับ' || $text == 'ฝันดีค่ะ' || $text == 'นอนหลับฝันดี' || $text == 'นอนแล้วนะ' || $text == 'นอนดีกว่า' || $text == 'นอนก่อนนะ' || $text == 'ขอตัวนอนก่อนนะ' || $text == 'ฝันดีทุกคน' || $text == 'ฝันดี ทุกคน' || $text == 'นอนแล้วครับ' || $text == 'นอนแล้วคับ'){
+				$messages = [
+				'type' => 'text',
+				'text' => $outputtt
+			];}	
+			
+			elseif(strstr($text,'ฝันดี')){
+				$messages = [
+				'type' => 'text',
+				'text' => ฝันดี
+			];}
+			
+			elseif(strstr($text,'ดีคับ')){
+				$messages = [
+				'type' => 'text',
+				'text' => สวัสดีครับ
+			];}
+					
+			elseif(strstr($text,'ดีครับ')){
+				$messages = [
+				'type' => 'text',
+				'text' => สวัสดีครับ
+			];}
+			
+			elseif(strstr($text,'ดีค่ะ')){
+				$messages = [
+				'type' => 'text',
+				'text' => สวัสดีค่ะ
+			];}
+							
+			//if(strstr($text,'Set the lastseens')){
+			//	$messages = [
+			//	'type' => 'sticker',
+			//	'STKID' => '100',
+			//	'STKPKGID' => '1',
+			//	'STKVER' => '100'
+			//];}
+			
+			//else{$messages = [
+			//'type' => 'text',
+			//'text' => $text}
+
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
