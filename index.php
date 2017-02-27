@@ -169,16 +169,16 @@ if (!is_null($events['events'])) {
 			//'STKVER' => '100'
 			//);
 			
-			$sticker = [
-				'type' => 'text',
-				'text' => ว๊ายขี้อวด
-			];
-			
 			//$sticker = [
-			//‘type’ => ‘sticker’,
-			//‘packageId’ => ‘4’,
-			//‘stickerId’ => ‘300’
+			//	'type' => 'text',
+			//	'text' => ว๊ายขี้อวด
 			//];
+			
+			$sticker = [
+			type’ => ‘sticker’,
+			‘packageId’ => 4,
+			‘stickerId’ => 300
+			];
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
