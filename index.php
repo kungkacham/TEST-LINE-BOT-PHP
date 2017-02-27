@@ -197,18 +197,17 @@ if (!is_null($events['events'])) {
 			‘messages’ => array($sticker),
 			);
 			
-			$post = json_encode($packet);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$dataEncode = json_encode($packet);
+			$headersOption = array('Content-Type: application/json','Authorization: Bearer ' . $access_token);
+ 
+			$ch = curl_init($urlReply);
+			curl_setopt($ch,CURLOPT_CUSTOMREQUEST,"POST");
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+			curl_setopt($ch,CURLOPT_POSTFIELDS,$dataEncode);
+			curl_setopt($ch,CURLOPT_HTTPHEADER,$headersOption);
+			curl_setopt($ch,CURLOPT_FOLLOWLOCATION,1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-			
 		}
 	}
 }
