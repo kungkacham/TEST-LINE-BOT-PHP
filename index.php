@@ -175,12 +175,21 @@ if (!is_null($events['events'])) {
 			//‘stickerId’ => ‘300’
 			//);
 			
-			 $sticker = array(
-			 ‘type’ => ‘sticker’,
-			 ‘packageId’ => ‘4’,
-			 ‘stickerId’ => ‘300’
-			 );
+			function getSticker($replyToken){
+			$sticker = array(
+			‘type’ => ‘sticker’,
+			‘packageId’ => ‘4’,
+			‘stickerId’ => ‘300’
+			);
+			$packet = array(
+			‘replyToken’ => $replyToken,
+			‘messages’ => array($sticker),
+			);
+			return $packet;
+			}
  
+			$packet = getSticker($item[‘replyToken’]);
+			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$packet = array(
