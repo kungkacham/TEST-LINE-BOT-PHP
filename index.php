@@ -176,8 +176,9 @@ if (!is_null($events['events'])) {
 			//];
 			
 			$sticker = [
-				'type' => 'text',
-				'text' => สติ๊กเกอร์
+			‘type’ => ‘sticker’,
+			‘packageId’ => ‘4’,
+			‘stickerId’ => ‘300’
 			];
 			
 			//$sticker = array(
@@ -188,15 +189,10 @@ if (!is_null($events['events'])) {
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			//$packet = [
-			//	'replyToken' => $replyToken,
-			//	'messages' =>[$sticker],
-			//];
-			
-			$packet = array(
-				‘replyToken’ => $replyToken,
-				‘messages’ => array($sticker),
-			);
+			$packet = [
+				'replyToken' => $replyToken,
+				'messages' =>[$sticker],
+			];
 			
 			$post = json_encode($packet);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
