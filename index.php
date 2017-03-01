@@ -175,17 +175,29 @@ if (!is_null($events['events'])) {
 			//	'text' => ว๊ายขี้อวด
 			//];
 			
-			$sticker = [
-				'type' => 'text',
-				'text' => สติ๊กเกอร์
-			];
+			//$sticker = [
+			//	'type' => 'text',
+			//	'text' => สติ๊กเกอร์
+			//];
+			
+			 $sticker = array(
+			‘type’ => ‘sticker’,
+			‘packageId’ => ‘4’,
+			‘stickerId’ => ‘300’
+			);
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$packet = [
-				'replyToken' => $replyToken,
-				'messages' =>[$sticker],
-			];
+			//$packet = [
+			//	'replyToken' => $replyToken,
+			//	'messages' =>[$sticker],
+			//];
+			
+			 $packet = array(
+				‘replyToken’ => $replyToken,
+				‘messages’ => array($sticker),
+			);
+			
 			$post = json_encode($packet);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
