@@ -125,6 +125,12 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => สวัสดีค่ะ
 			];}
+			
+			if($text == 'ทดสอบ'){
+				$messages = [
+				'type' => 'text',
+				'text' => '   '
+			];}
 							
 			//if(strstr($text,'Set the lastseens')){
 			//	$messages = [
