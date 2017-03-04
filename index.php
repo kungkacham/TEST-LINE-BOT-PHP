@@ -129,7 +129,7 @@ if (!is_null($events['events'])) {
 			if($text == '1'){
 				$messages = [
 				'type' => 'text',
-				'text' => "\n."
+				'text' => "\n "
 			];}
 							
 			//if(strstr($text,'Set the lastseens')){
