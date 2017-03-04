@@ -126,10 +126,10 @@ if (!is_null($events['events'])) {
 				'text' => สวัสดีค่ะ
 			];}
 			
-			if($text == 'ทดสอบ'){
+			if($text == '1'){
 				$messages = [
 				'type' => 'text',
-				'text' => '   '
+				'text' => '.\n.<br/>.'
 			];}
 							
 			//if(strstr($text,'Set the lastseens')){
