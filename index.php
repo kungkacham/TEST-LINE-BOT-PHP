@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 			];}		
 			
 			if(strstr($text,'have seen at the lastseen point')){
-				sleep(1);
+				sleep(3);
 				$messages = [
 				'type' => 'text',
 				'text' => setlastpoint
