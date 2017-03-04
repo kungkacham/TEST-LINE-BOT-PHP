@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 			$output = $array[array_rand($array,1)];
 		
 			if(strstr($text,'Set the lastseens')){
-				sleep(3);
+				sleep(5);
 				$messages = [
 				'type' => 'text',
 				'text' => $output
