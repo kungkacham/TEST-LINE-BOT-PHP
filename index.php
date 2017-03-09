@@ -109,6 +109,18 @@ if (!is_null($events['events'])) {
 				'text' => ฝันดี
 			];}
 			
+			if(strstr($text,'มอนิ่ง')){
+				$messages = [
+				'type' => 'text',
+				'text' => วัวไม่ขยับ
+			];}
+			
+			if(strstr($text,'วัวไม่ขยับ')){
+				$messages = [
+				'type' => 'text',
+				'text' => มอนิ่ง
+			];}
+			
 			if(strstr($text,'ดีคับ')){
 				$messages = [
 				'type' => 'text',
