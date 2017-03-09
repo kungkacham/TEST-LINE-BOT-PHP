@@ -253,8 +253,6 @@ if (!is_null($events['events'])) {
 			];}
 			
 			if($text == 'วันที่'){
-				$messages = [
-				'type' => 'text',
 				$strYear = date("Y",strtotime($strDate))+543;
 				$strMonth = date("n",strtotime($strDate));
 				$strDay = date("j",strtotime($strDate));
@@ -264,6 +262,8 @@ if (!is_null($events['events'])) {
 				$strMonthCut = Array("","ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค.");
 				$strMonthThai = $strMonthCut[$strMonth]; 
 				$strYearCut = substr($strYear,2,2); //เอา2ตัวท้ายของปี .พ.ศ.
+				$messages = [
+				'type' => 'text',
 				'text' => "$strDay $strMonthThai $strYearCut";
 			];}
 				
