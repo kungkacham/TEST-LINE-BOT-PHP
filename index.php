@@ -78,6 +78,12 @@ if (!is_null($events['events'])) {
 				'text' => $outputttt
 			];}
 			
+			if(strstr($text,'กๅก')){
+			$messages = [
+				'type' => 'text',
+				'text' => "กาก เขาพิมพ์กันแบบนี้จ๊ะ ถ้าจะกาก กรุุณากากอย่างมีรสนิยมนะจ๊ะ"
+			];}
+			
 			if($text == '...'){
 				$messages = [
 				'type' => 'text',
