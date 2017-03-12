@@ -333,6 +333,36 @@ if (!is_null($events['events'])) {
 				'text' => "Siri:reinvite"
 			];}
 			
+			if($text == 'ช่วยเหลือ'){
+				$messages = [
+				'type' => 'text',
+				'text' => "Siri:ヘルプ"
+			];}
+			
+			if($text == 'อัปเดตแอดมิน'){
+				$messages = [
+				'type' => 'text',
+				'text' => "Siri:強制解除"
+			];}
+
+			if($text == 'ชุดตั้งค่า'){
+				$messages = [
+				'type' => 'text',
+				'text' => "[ชุดตั้งค่า]ตั้งหรือเปลี่ยน,ส่งคำสั่ง+ส่งข้อมูลในเวลาเดียวกัน) \n ★เชคแอดมิน← Siri:groupcreator \n ★เชคแอดสำลอง← Siri:予備作成者 \n ☆เปลี่ยนแอดมิน← Set:changeowner \n ☆ตั้งแอดสำรอง← 設定:予備作者変更 \n ________________________________________ \n ■ตั้งบัญชีดำ← Set:addblacklist \n □ตั้งบัญชีขาว← Set:addwhitelist \n ◆ขับไล่บัญชีดำในกลุ่ม← Siri:追い出し \n ________________________________________ \n •ลบค้างเชิญสมาชิคทั้งหมด← Siri:cancelinvite \n •อัปเดตแอดมิน← Siri:強制解除 \n •สลับแอดสำรองเป็นแอดหลัก← 設定:作者交換 \n อ้างอิงคำสั่งมาจาก ☆ธ ปท❶Fire✿bird❀bot✍ ของ http://line.me/R/ti/p/~4G2017"
+			];}
+
+			if($text == 'ชุดล็อค'){
+				$messages = [
+				'type' => 'text',
+				'text' => "[ชุดล็อค]ปิดอนุญาตสมาชิก☆ \n 1>ล็อคไอคอน← Set:iconlock:on \n 2>ปิดอนุญาตเชิญ← Set:blockinvite:on \n 3>ล็อคแอดมิน←     Set:ownerlock:on \n 4>ล็อคชื่อกลุ่ม←   Set:changenamelock:on \n 5>ล็อคสติ๊กเกอร์← Set:StampLimitation:On \n 6>ล็อคบอทอ่านไม่ให้ตอบ← 設定:らっこさん:off \n 7>ล็อค,ปิดลิงค์กลุ่ม←  Siri:DenyURLInvite \n 8>ปิดบอทเพื่อไม่ให้ตอบคำสั่ง← siri:off \n __ ____ ___ __ ___ ____ __ __ ___ ____ _ ___☆ \n อ้างอิงคำสั่งมาจาก ☆ธ ปท❶Fire✿bird❀bot✍ ของ http://line.me/R/ti/p/~4G2017"
+			];}
+
+			if($text == 'ชุดปลดล็อค'){
+				$messages = [
+				'type' => 'text',
+				'text' => "______[ชุดปลดล็อค]เปิดอนุญาตสมาชิก_____ \n 1>ปลดล็อคไอคอน← Set:iconlock:off \n 2>เปิดอนุญาตเชิญ← Set:blockinvite:off \n 3>ปลดล็อคแอดมิน←     Set:ownerlock:off \n 4>ปลดล็อคชื่อกลุ่ม←   Set:changenamelock:on \n 5>ปลดล็อคสติ๊กเกอร์← Set:StampLimitation:On \n 6>เปิดใช้งานบอทอ่าน← 設定:らっこさん:on \n 7>เปิดลิงค์กลุ่ม←  Siri:inviteurl \n 8>เปิดบอทเพื่อให้ตอบคำสั่ง← siri:on \n __ ____ ___ __ ___ ____ __ __ ___ ____ __ __ ___ \n อ้างอิงคำสั่งมาจาก ☆ธ ปท❶Fire✿bird❀bot✍ ของ http://line.me/R/ti/p/~4G2017"
+			];}			
+			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
