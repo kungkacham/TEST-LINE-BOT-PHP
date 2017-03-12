@@ -54,12 +54,6 @@ if (!is_null($events['events'])) {
 				'text' => $output
 			];}
 			
-			if(strstr($text,'บอทกาก')){
-			$messages = [
-				'type' => 'text',
-				'text' => ใครกันแน่ที่กาก
-			];}
-			
 			$arraybot = array('', '', '', '', '', '', '', '', '', '', '', '', '', 'จ๋าจ๊ะ', 'ว่าไงจ๊ะ', 'คิดถึงล่ะซี้', 'เรียกทำไมจ๊ะ', 'ด่าได้ แต่อย่าแรง', 'ชื่อเหมือนบิดาคุณหรอ', 'บอทไงจ๊ะ จะใครล่ะ', 'ครับผม จะรีบไปไหน จะรีบไปไหน พักเดี๋ยวหนึ่งซิครับ', '', '', '', '', '', '', '', '', '', '', '', '');
 			$outputbot = $arraybot[array_rand($arraybot,1)];
 			
@@ -261,18 +255,15 @@ if (!is_null($events['events'])) {
 				'text' => $outputgag
 			];}
 			
+			$arrayb = array('พ่อง !!!', 'พ่องตาย !!!', 'พ่องมริงตาย !!!' ,'บ่');
+			$outputb = $arrayb[array_rand($arrayb,1)];
+			
 			if($text == 'บ่'){
 			$messages = [
 				'type' => 'text',
-				'text' => "พ่อง !!!"
+				'text' => $outputb
 			];}
-			
-			if($text == 'บ่รู้'){
-			$messages = [
-				'type' => 'text',
-				'text' => "พ่อง !!!"
-			];}
-				
+							
 			//if(strstr($text,'')){
 			//	$messages = [
 			//	'type' => 'text',
