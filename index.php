@@ -264,13 +264,13 @@ if (!is_null($events['events'])) {
 			if($text == 'บ่'){
 			$messages = [
 				'type' => 'text',
-				'text' => "พ่องงง"
+				'text' => "พ่อง !!!"
 			];}
 			
 			if($text == 'บ่รู้'){
 			$messages = [
 				'type' => 'text',
-				'text' => "พ่องงง"
+				'text' => "พ่อง !!!"
 			];}
 				
 			//if(strstr($text,'')){
