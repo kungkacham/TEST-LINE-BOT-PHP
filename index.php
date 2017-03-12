@@ -321,7 +321,7 @@ if (!is_null($events['events'])) {
 				'text' => "既読ポイント設定"
 			];}
 			
-			if($text == 'ใครแอบ'){
+			if(strstr($text,'ใครแอบ')){
 				$messages = [
 				'type' => 'text',
 				'text' => "既読確認"
