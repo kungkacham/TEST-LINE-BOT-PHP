@@ -260,6 +260,12 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $outputgag
 			];}
+			
+			if($text == 'บ่'){
+			$messages = [
+				'type' => 'text',
+				'text' => พ่องตาย
+			];}
 				
 			//if(strstr($text,'')){
 			//	$messages = [
