@@ -255,7 +255,7 @@ if (!is_null($events['events'])) {
 				'text' => $outputgag
 			];}
 			
-			$arrayb = array('พ่อง !!!', 'พ่องตาย !!!', 'พ่องมริงตาย !!!' ,'บ่');
+			$arrayb = array('พ่อง !!!', 'พ่องตาย !!!', 'พ่องมรึงตาย !!!' ,'บ่', 'บิดาคุณตาย !!!');
 			$outputb = $arrayb[array_rand($arrayb,1)];
 			
 			if($text == 'บ่'){
