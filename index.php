@@ -114,22 +114,31 @@ if (!is_null($events['events'])) {
 				'text' => $outputtt
 			];}	
 			
+			if(strstr($text,'ฝรรดี')){
+				$messages = [
+				'type' => 'text',
+				'text' => $outputtt
+			];}
+			
 			if(strstr($text,'ฝันดี')){
 				$messages = [
 				'type' => 'text',
 				'text' => ฝันดี
 			];}
 			
+			$arraymorning = array('วัวไม่ขยับครับ', 'วัวไม่ขยับค่ะ', 'มอนิ่งครับ', 'มอนิ่งค่ะ', 'Good morning');
+			$outputmorning = $arraymorning[array_rand($arraymorning,1)];
+			
 			if(strstr($text,'มอนิ่ง')){
 				$messages = [
 				'type' => 'text',
-				'text' => วัวไม่ขยับ
+				'text' => $outputmorning
 			];}
 			
 			if(strstr($text,'วัวไม่ขยับ')){
 				$messages = [
 				'type' => 'text',
-				'text' => มอนิ่ง
+				'text' => มอนิ่งครับ
 			];}
 			
 			if(strstr($text,'ดีคับ')){
