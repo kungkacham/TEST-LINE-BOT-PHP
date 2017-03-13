@@ -255,14 +255,14 @@ if (!is_null($events['events'])) {
 				'text' => $outputgag
 			];}
 			
-			$arrayb = array('พ่อง !!!', 'พ่องตาย !!!', 'พ่องมรึงตาย !!!' ,'บ่', 'บิดาคุณตาย !!!');
-			$outputb = $arrayb[array_rand($arrayb,1)];
+			//$arrayb = array('พ่อง !!!', 'พ่องตาย !!!', 'พ่องมรึงตาย !!!' ,'บ่', 'บิดาคุณตาย !!!');
+			//$outputb = $arrayb[array_rand($arrayb,1)];
 			
-			if($text == 'บ่'){
-			$messages = [
-				'type' => 'text',
-				'text' => $outputb
-			];}
+			//if($text == 'บ่'){
+			//$messages = [
+			//	'type' => 'text',
+			//	'text' => $outputb
+			//];}
 							
 			//if(strstr($text,'')){
 			//	$messages = [
