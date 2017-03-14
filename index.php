@@ -256,7 +256,7 @@ if (!is_null($events['events'])) {
 			];}
 			
 			$arraytest = array($text);
-			$outputtest = $arraygag[array_rand($arraytest,1)];
+			$outputtest = $arraytest[array_rand($arraytest,1)];
 			
 			if(strstr($text,'test')){
 			$messages = [
