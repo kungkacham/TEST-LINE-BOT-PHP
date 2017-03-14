@@ -255,6 +255,15 @@ if (!is_null($events['events'])) {
 				'text' => $outputgag
 			];}
 			
+			$arraytest = array($text);
+			$outputtest = $arraygag[array_rand($arraytest,1)];
+			
+			if(strstr($text,'test')){
+			$messages = [
+				'type' => 'text',
+				'text' => $outputtest
+			];}
+			
 			//$arrayb = array('พ่อง !!!', 'พ่องตาย !!!', 'พ่องมรึงตาย !!!' ,'บ่', 'บิดาคุณตาย !!!');
 			//$outputb = $arrayb[array_rand($arrayb,1)];
 			
