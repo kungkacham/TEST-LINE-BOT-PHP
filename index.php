@@ -335,6 +335,12 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => "既読確認"
 			];}
+
+			if(strstr($text,'ใครอ่าน')){
+				$messages = [
+				'type' => 'text',
+				'text' => "既読確認"
+			];}
 			
 			if(strstr($text,'のユーザが既読ポイントまで内容を読んでいます')){
 				sleep(3);
