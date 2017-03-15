@@ -17,6 +17,8 @@ function postMessage($token,$packet,$urlReply){
  $result = curl_exec($ch);
  curl_close($ch);
  
+ echo $result . "\r\n";
+ 
 }
 
 function getSticker($replyToken){
@@ -42,6 +44,7 @@ if(isset($res[‘events’]) && !is_null($res[‘events’])){
 				'type' => 'text',
 				'text' => "."
 			];
+ postMessage($token,$packet,$urlReply);
  break;
  case ‘image’:
  break;
@@ -53,6 +56,7 @@ if(isset($res[‘events’]) && !is_null($res[‘events’])){
  break;
  case ‘sticker’: 
  $packet = getSticker($item[‘replyToken’]);
+ postMessage($token,$packet,$urlReply);
  break;
 }}}}
 
