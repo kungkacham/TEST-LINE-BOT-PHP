@@ -37,7 +37,11 @@ if(isset($res[‘events’]) && !is_null($res[‘events’])){
  foreach($res[‘events’] as $item){
  if($item[‘type’] == ‘message’){
  switch($item[‘message’][‘type’]){
- case ‘text’:	
+ case ‘text’:
+ $packet =[
+				'type' => 'text',
+				'text' => "."
+			];
  break;
  case ‘image’:
  break;
