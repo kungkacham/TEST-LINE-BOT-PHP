@@ -26,11 +26,11 @@ if (!is_null($events['events'])) {
 			//'STKVER' => '100'
 			//);
 					
-			$sticker = [
-			‘type’ => ‘text’,
+			$sticker = array([
+			‘type’ => ‘sticker’,
 			‘packageId’ => ‘4’,
 			‘stickerId’ => ‘300’
-			];
+			]);
 			
 			//$sticker = array(
 			//‘type’ => ‘sticker’,
@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$packet = [
 				'replyToken' => $replyToken,
-				'messages' =>[$sticker],
+				'messages' => array([$sticker]),
 			];
 			
 			$post = json_encode($packet);
