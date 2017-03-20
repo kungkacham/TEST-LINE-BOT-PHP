@@ -91,6 +91,14 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => "ไม่มีสมองพิมพ์เองหรือไง ขี้ก๊อป อายคนอื่นเขาบ้างเถอะ "
 			];}
+			
+			$result_array   = array_search($text,"ไม่มีสมองพิมพ์เองหรือไง ขี้ก๊อป อายคนอื่นเขาบ้างเถอะ "); 
+ 
+			if($result_array!=FALSE){
+			$messages = [
+				'type' => 'text',
+				'text' => "คนพิมพ์ก็เช่นกัน"
+			];}
 		
 			if($text == '...'){
 				$messages = [
