@@ -71,7 +71,16 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $outputttt
 			];}
-			
+
+			// ใช้ Function array_search() ในการค้นหา โดยระบุ ชื่อ Array ที่ต้องการค้นหา
+			$result_array   = array_search($text, $arrayyyy); 
+ 
+			if($result_array!=FALSE){
+			$messages = [
+				'type' => 'text',
+				'text' => "ไม่มีสมองพิมพ์เองหรือไง ขี้ก๊อป อายคนอื่นเขาบ้างเถอะ "
+			];}
+		
 			if($text == '...'){
 				$messages = [
 				'type' => 'text',
@@ -142,6 +151,14 @@ if (!is_null($events['events'])) {
 				$messages = [
 				'type' => 'text',
 				'text' => $outputba
+			];}
+			
+			$result1_array   = array_search($text, $arrayba); 
+ 
+			if($result1_array!=FALSE){
+			$messages = [
+				'type' => 'text',
+				'text' => "ไม่มีสมองพิมพ์เองหรือไง ขี้ก๊อป อายคนอื่นเขาบ้างเถอะ "
 			];}
 			
 			if($text == 'NaN'){
@@ -432,6 +449,15 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $stickeroutput
 			];
+			
+			$result2_array   = array_search($text, $stickerarray); 
+ 
+			if($result2_array!=FALSE){
+			$messages = [
+				'type' => 'text',
+				'text' => "ไม่มีสมองพิมพ์เองหรือไง ขี้ก๊อป อายคนอื่นเขาบ้างเถอะ "
+			];}
+			
 			
 			//$sticker = [
 			//‘type’ => ‘sticker’,
