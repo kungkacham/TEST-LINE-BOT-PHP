@@ -216,7 +216,7 @@ if (!is_null($events['events'])) {
 			if($text == 'ลิงค์ห้องเฟรนลี่'){
 				$messages = [
 				'type' => 'text',
-				'text' => "http://line.me/R/ti/g/-yjVBttpYf"
+				'text' => "http://line.me/R/ti/g/6Dwpk037uf"
 			];}
 			
 			if($text == 'เปิดลิงค์'){
