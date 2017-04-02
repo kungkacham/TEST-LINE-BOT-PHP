@@ -22,13 +22,21 @@
 		echo "Database Connect Failed.\n";
 	}
 	
-	$sql = "INSERT INTO `heroku_42e65519c326c73`.`counter` (`ID`, `counter`) VALUES ('2', '2');";
+	$link = mysqli_connect($server, $username, $password, $db);
+    $result = mysqli_query($link, "select * from counter");
+
+    while($user = mysqli_fetch_array($result)) {
+      echo $user['id'], " : ", $user['name'], "<br>";
+    }
+	
+	
+	/*$sql = "INSERT INTO `heroku_42e65519c326c73`.`counter` (`ID`, `counter`) VALUES ('2', '2');";
 
 	if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 	} else {
     echo "Error: " . $sql . "<br>" . $conn->error;
-	}
+	}*/
 	
 	mysqli_close($conn);
 	
