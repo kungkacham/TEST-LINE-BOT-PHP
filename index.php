@@ -1,6 +1,6 @@
 <?php
 
-	$servername = "mysql.hostinger.in.th";
+	$servername = "autobotohmygod.16mb.com";
 	$database = "u234723275_stic";
 	$username = "u234723275_stic";
 	$password = "5tvsuV2P7drO";
@@ -19,7 +19,7 @@
 	echo "Connected successfully";
 	mysqli_close($conn);
 
-		/*$host = "mysql.hostinger.in.th";
+		/*$host = "mysql.hostinger.in.th"; 
 		$username = "u234723275_stic";
 		$password = "5tvsuV2P7drO";
 		$db="u234723275_stic";
