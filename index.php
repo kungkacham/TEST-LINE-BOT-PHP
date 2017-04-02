@@ -12,6 +12,10 @@
 	
 	$conn = new mysqli($server, $username, $password, $db);
 	
+	if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+	} 
+	
 	$sql = "INSERT INTO counter (counter) 
 	VALUES ('1')";
 
