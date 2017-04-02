@@ -25,7 +25,14 @@
 	mysqli_close($conn);
 
 	
-	
+	$sql = "INSERT INTO counter (counter)
+	VALUES ('2')";
+
+	if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+	} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+	}
 	
 	
 	
