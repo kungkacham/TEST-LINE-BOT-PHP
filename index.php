@@ -1,13 +1,15 @@
 <?php
 
-	$servername = "us-cdbr-iron-east-03.cleardb.net";
-	$database = "heroku_5f630c7697ea0b4";
-	$username = "ba2cfeccd6a65a";
-	$password = "b70b51f3";
+		$url = parse_url(getenv("mysql://ba2cfeccd6a65a:b70b51f3@us-cdbr-iron-east-03.cleardb.net/heroku_5f630c7697ea0b4?reconnect=t"));
+
+		$server = $url["us-cdbr-iron-east-03.cleardb.net"];
+		$username = $url["ba2cfeccd6a65a"];
+		$password = $url["b70b51f3"];
+		$db = substr($url["heroku_5f630c7697ea0b4"], 1);
+
+		$conn = new mysqli($server, $username, $password, $db);
 
 	// Create connection
-
-	$conn = mysql_connect($servername, $username, $password);
 
 	// Check connection
 	
@@ -20,7 +22,7 @@
 		echo "Database Connect Failed.";
 	}
 	
-	mysql_close($conn);
+	mysqli_close($conn);
 
 	
 	
