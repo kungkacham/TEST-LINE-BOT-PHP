@@ -12,7 +12,7 @@
 	
 	$conn = new mysqli($server, $username, $password, $db);
 	
-	$sql = "INSERT INTO counter (counter) VALUES ('10')";
+	$sql = "INSERT INTO counter (counter) VALUES ('1')";
 
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
