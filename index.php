@@ -1,31 +1,26 @@
 <?php
 	
-		$url = parse_url(getenv("mysql://b9b546d969c94c:917550df@us-cdbr-iron-east-03.cleardb.net/heroku_42e65519c326c73?reconnect=true"));
+	$url = parse_url(getenv("mysql://b9b546d969c94c:917550df@us-cdbr-iron-east-03.cleardb.net/heroku_42e65519c326c73?reconnect=true"));
 
-		$server = $url["us-cdbr-iron-east-03.cleardb.net"];
-		$username = $url["b9b546d969c94c"];
-		$password = $url["917550df"];
-		$db = substr($url["heroku_42e65519c326c73"], 1);
-		$tb = "counter";
-		
-		$conn = new mysql($server, $username, $password);
+	$server = $url["us-cdbr-iron-east-03.cleardb.net"];
+	$username = $url["b9b546d969c94c"];
+	$password = $url["917550df"];
+	$db = substr($url["heroku_42e65519c326c73"], 1);
+
 	
-		
-		
 	// Create connection
+	
+	$conn = new mysqli($server, $username, $password, $db);
+	
+	$sql = "INSERT INTO counter (counter) VALUES ('10')";
 
-	// Check connection
-	
-	if($conn)
-	{
-		echo "Database Connected.";
+	if ($conn->query($sql) === TRUE) {
+		echo "New record created successfully";
+	} else {
+		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
-	else
-	{
-		echo "Database Connect Failed.";
-	}
-	
-	mysql_close($conn);
+
+	$conn->close();
 
 	
 	
@@ -52,33 +47,6 @@
 		$dbquery2=mysql_db_query($db,$sql2);
 		mysql_close();*/
 		
-		
-/*	Main Hosting Details
-	Control panel username
-	feton_19913113
-	Control panel password	**********
-	Control panel URL
-	cpanel.freehost.in.th
-	MySQL username
-	feton_19913113
-	MySQL password
-	**********
-	MySQL hostname
-	sql200.freehost.in.th
-	FTP username
-	feton_19913113
-	FTP password
-	**********
-	FTP host name	ftp.freehost.in.th
-
-
-	Your Website URL's
-	Home page
-	http://faith.freehost.in.th 
-	
-	http://cpanel.freehost.in.th/panel/indexcp.php?option=mysql
-	
-	*/
 		
 		
 //echo "Hello LINE BOT";
