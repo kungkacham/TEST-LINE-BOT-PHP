@@ -8,11 +8,8 @@
 		$db = substr($url["heroku_42e65519c326c73"], 1);
 		$tb = "counter";
 		
-		$conn = new mysqli($server, $username, $password, $db);
-		$sql = "INSERT INTO counter {counter} VALUES ('2')";
-		mysqli_close($conn);
-		
-		
+		$conn = new mysql($server, $username, $password);
+	
 		
 		
 	// Create connection
@@ -28,7 +25,7 @@
 		echo "Database Connect Failed.";
 	}
 	
-	mysqli_close($conn);
+	mysql_close($conn);
 
 	
 	
