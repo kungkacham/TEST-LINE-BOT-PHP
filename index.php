@@ -1,9 +1,9 @@
 <?php
 
-	$servername = "sql200.freehost.in.th";
-	$database = "feton_19913113_stic";
-	$username = "feton_19913113";
-	$password = "Pass7890";
+	$servername = "us-cdbr-iron-east-03.cleardb.net";
+	$database = "heroku_5f630c7697ea0b4";
+	$username = "ba2cfeccd6a65a";
+	$password = "b70b51f3";
 
 	// Create connection
 
