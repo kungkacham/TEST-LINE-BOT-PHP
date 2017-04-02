@@ -6,25 +6,22 @@
 	$username = $url["b9b546d969c94c"];
 	$password = $url["917550df"];
 	$db = substr($url["heroku_42e65519c326c73"], 1);
-
+	
 	// Create connection
 	
 	$conn = new mysqli($server, $username, $password, $db);
+	// Check connection
 	
-	if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-	} 
+	if($conn)
+	{
+		echo "Database Connected.";
+	}
+	else
+	{
+		echo "Database Connect Failed.";
+	}
 	
-	/*$sql = "INSERT INTO counter (counter) 
-	VALUES ('1')";
-
-	if ($conn->query($sql) === TRUE) {
-		echo "New record created successfully";
-	} else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
-	}*/
-
-	$conn->close();
+	mysqli_close($conn);
 
 	
 	
@@ -51,6 +48,33 @@
 		$dbquery2=mysql_db_query($db,$sql2);
 		mysql_close();*/
 		
+		
+/*	Main Hosting Details
+	Control panel username
+	feton_19913113
+	Control panel password	**********
+	Control panel URL
+	cpanel.freehost.in.th
+	MySQL username
+	feton_19913113
+	MySQL password
+	**********
+	MySQL hostname
+	sql200.freehost.in.th
+	FTP username
+	feton_19913113
+	FTP password
+	**********
+	FTP host name	ftp.freehost.in.th
+
+
+	Your Website URL's
+	Home page
+	http://faith.freehost.in.th 
+	
+	http://cpanel.freehost.in.th/panel/indexcp.php?option=mysql
+	
+	*/
 		
 		
 //echo "Hello LINE BOT";
