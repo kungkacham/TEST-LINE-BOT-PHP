@@ -6,9 +6,15 @@
 		$username = $url["b9b546d969c94c"];
 		$password = $url["917550df"];
 		$db = substr($url["heroku_42e65519c326c73"], 1);
-
+		$tb = "counter";
+		
 		$conn = new mysqli($server, $username, $password, $db);
-
+		$sql = "INSERT INTO counter {counter} VALUES ('2')";
+		mysqli_close($conn);
+		
+		
+		
+		
 	// Create connection
 
 	// Check connection
