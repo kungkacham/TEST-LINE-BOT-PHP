@@ -1,9 +1,9 @@
 <?php
 
-	$servername = "autobotohmygod.16mb.com";
-	$database = "u234723275_stic";
-	$username = "u234723275_stic";
-	$password = "5tvsuV2P7drO";
+	$servername = "sql200.freehost.in.th";
+	$database = "feton_19913113_stic";
+	$username = "feton_19913113";
+	$password = "Pass7890";
 
 	// Create connection
 
@@ -19,6 +19,11 @@
 	echo "Connected successfully";
 	mysqli_close($conn);
 
+	
+	
+	
+	
+	
 		/*$host = "mysql.hostinger.in.th"; 
 		$username = "u234723275_stic";
 		$password = "5tvsuV2P7drO";
@@ -40,6 +45,28 @@
 		mysql_close();*/
 		
 		
+/*	Main Hosting Details
+	Control panel username
+	feton_19913113
+	Control panel password	**********
+	Control panel URL
+	cpanel.freehost.in.th
+	MySQL username
+	feton_19913113
+	MySQL password
+	**********
+	MySQL hostname
+	sql200.freehost.in.th
+	FTP username
+	feton_19913113
+	FTP password
+	**********
+	FTP host name	ftp.freehost.in.th
+
+
+	Your Website URL's
+	Home page
+	http://faith.freehost.in.th */
 		
 		
 //echo "Hello LINE BOT";
