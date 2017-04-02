@@ -10,6 +10,7 @@
 	// Create connection
 	
 	$conn = new mysqli($server, $username, $password, $db);
+
 	// Check connection
 	
 	if($conn)
