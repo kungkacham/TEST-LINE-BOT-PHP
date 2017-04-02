@@ -22,10 +22,7 @@
 		echo "Database Connect Failed.\n";
 	}
 	
-	mysqli_close($conn);
-
-	
-	$sql = "INSERT INTO `heroku_42e65519c326c73`.`counter` (`ID`, `counter`) VALUES ('1', '1');";
+	$sql = "INSERT INTO `heroku_42e65519c326c73`.`counter` (`ID`, `counter`) VALUES ('2', '2');";
 
 	if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -33,7 +30,7 @@
     echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 	
-	
+	mysqli_close($conn);
 	
 		/*$host = "mysql.hostinger.in.th"; 
 		$username = "u234723275_stic";
