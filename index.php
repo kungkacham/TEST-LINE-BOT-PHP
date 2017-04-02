@@ -7,7 +7,6 @@
 	$password = $url["917550df"];
 	$db = substr($url["heroku_42e65519c326c73"], 1);
 
-	
 	// Create connection
 	
 	$conn = new mysqli($server, $username, $password, $db);
@@ -16,14 +15,14 @@
     die("Connection failed: " . $conn->connect_error);
 	} 
 	
-	$sql = "INSERT INTO counter (counter) 
+	/*$sql = "INSERT INTO counter (counter) 
 	VALUES ('1')";
 
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
-	}
+	}*/
 
 	$conn->close();
 
