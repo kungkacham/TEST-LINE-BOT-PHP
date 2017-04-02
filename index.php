@@ -15,18 +15,17 @@
 	
 	if($conn)
 	{
-		echo "Database Connected.";
+		echo "Database Connected.\n";
 	}
 	else
 	{
-		echo "Database Connect Failed.";
+		echo "Database Connect Failed.\n";
 	}
 	
 	mysqli_close($conn);
 
 	
-	$sql = "INSERT INTO counter (counter)
-	VALUES ('2')";
+	$sql = "INSERT INTO `heroku_42e65519c326c73`.`counter` (`ID`, `counter`) VALUES ('1', '1');";
 
 	if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
