@@ -7,17 +7,20 @@
 
 	// Create connection
 
-	$conn = mysqli_connect($servername, $username, $password, $database);
+	$conn = mysql_connect($servername, $username, $password);
 
 	// Check connection
-
-	if (!$conn) {
-
-    die("Connection failed: " . mysqli_connect_error());
-
-}
-	echo "Connected successfully";
-	mysqli_close($conn);
+	
+	if($conn)
+	{
+		echo "Database Connected.";
+	}
+	else
+	{
+		echo "Database Connect Failed.";
+	}
+	
+	mysql_close($conn);
 
 	
 	
@@ -66,7 +69,11 @@
 
 	Your Website URL's
 	Home page
-	http://faith.freehost.in.th */
+	http://faith.freehost.in.th 
+	
+	http://cpanel.freehost.in.th/panel/indexcp.php?option=mysql
+	
+	*/
 		
 		
 //echo "Hello LINE BOT";
